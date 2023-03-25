@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/yaser-ali.github.io/static/css/main.b6688954.css",
-    "main.js": "/yaser-ali.github.io/static/js/main.ea3cd4d3.js",
-    "static/js/787.1a46b34a.chunk.js": "/yaser-ali.github.io/static/js/787.1a46b34a.chunk.js",
-    "static/media/Yaser.pdf": "/yaser-ali.github.io/static/media/Yaser.71b9936753426680df95.pdf",
-    "index.html": "/yaser-ali.github.io/index.html",
-    "main.b6688954.css.map": "/yaser-ali.github.io/static/css/main.b6688954.css.map",
-    "main.ea3cd4d3.js.map": "/yaser-ali.github.io/static/js/main.ea3cd4d3.js.map",
-    "787.1a46b34a.chunk.js.map": "/yaser-ali.github.io/static/js/787.1a46b34a.chunk.js.map"
+    "main.css": "/static/css/main.b6688954.css",
+    "main.js": "/static/js/main.5c44b615.js",
+    "static/js/787.1a46b34a.chunk.js": "/static/js/787.1a46b34a.chunk.js",
+    "static/media/Yaser.pdf": "/static/media/Yaser.71b9936753426680df95.pdf",
+    "index.html": "/index.html",
+    "main.b6688954.css.map": "/static/css/main.b6688954.css.map",
+    "main.5c44b615.js.map": "/static/js/main.5c44b615.js.map",
+    "787.1a46b34a.chunk.js.map": "/static/js/787.1a46b34a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b6688954.css",
-    "static/js/main.ea3cd4d3.js"
+    "static/js/main.5c44b615.js"
   ]
 }
