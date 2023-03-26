@@ -3,27 +3,29 @@ import "../App.css";
 import { Github } from "@styled-icons/boxicons-logos/Github";
 import { Linkedin } from "@styled-icons/boxicons-logos/Linkedin";
 import { FileDownload } from '@styled-icons/remix-line/FileDownload';
+import { Instagram } from '@styled-icons/boxicons-logos/Instagram';
 import styled from 'styled-components';
 
 const Git = styled(Github)`
-  width: 15%;
+  width: 100%;
 `;
 const Link = styled(Linkedin)`
-  width: 15%;
+  width: 100%;
 `;
 const Download = styled(FileDownload)`
-  width: 15%;
+  width: 100%;
+`
+const Insta = styled(Instagram)`
+width: 100%;
 `
 const Footer = () => {
   const Year = new Date();
   return (
     <>
       <footer>
-        <div className="row">
-        <div className="col-25"><h3>What I am currently doing</h3>
-            <p>
-              Freelancing atm.
-            </p>
+        <div className="rowFooter">
+          <div className="col-25">
+            <h3>@Copyright Yaser {Year.getFullYear()}</h3>
           </div>
           <div className="col-25"><h3>About me</h3>
             <p>
@@ -32,20 +34,22 @@ const Footer = () => {
             </p>
           </div>
           <div className="col-25">
-            <h3>Download my CV:</h3>
+            <h3>CV</h3>
             <p>
-              <a target="_blank" rel='noreferrer' href={pdf}><Download /></a>
+              Want a copy of my up to date resume? click on the download button icon.
+
             </p>
-          </div>
-          <div className="col-25">
-            <h3>Follow me</h3>
-            <a className="footerSM" href="https://github.com/yaser-ali"><Git /></a>
-            <a className="footerSM" href="https://www.linkedin.com/in/yaser-al-thahab-17654a241/"><Link /></a>
+            <a target="_blank" rel='noreferrer' href={pdf}><Download className="footerSM" /></a>
 
           </div>
-          <div className="col-100">
-            <h3>@Copyright Yaser Al-Thahab {Year.getFullYear()}</h3>
+          <div className="col-25">
+            <h3>Follow Me</h3>
+            <a href="https://github.com/yaser-ali"><Git className="footerSM" /></a>
+            <a href="https://www.linkedin.com/in/yaser-al-thahab-17654a241/"><Link className="footerSM" /></a>
+            <a href="https://www.instagram.com/ya.al__/"><Insta className="footerSM" /></a>
+            
           </div>
+
         </div>
 
       </footer>
