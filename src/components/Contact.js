@@ -10,6 +10,16 @@ const Contact = () => {
 
     // const [StatusMessage, setStatusMessage] = useState('');
 
+
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {value: ''};
+
+    //     this.handleChange this.handleChange.bind(this);
+    //     this.handleSubmit this.handleSubmit.bind(this);
+    // }
+
+
     const handleSubmit = (e) => {
         e.preventDefault();
         emailjs.sendForm('service_qlaojj9', 'template_hr9cn9l', form.current, 'o39-FujFPQYn48njg')
@@ -33,11 +43,11 @@ const Contact = () => {
 
     const handleChange = (event) => {
         event.preventDefault();
-        const { name, value } = event.target;
-        let errors = this.state.errors;
+        // const { name, value } = event.target;
+        // let errors = this.state.errors;
 
         
-        switch (name) {
+        /* switch (name) {
             case 'user_Name':
                 errors.user_name = ""
                         ? 'Name must be at least 3 characters long'
@@ -56,8 +66,8 @@ const Contact = () => {
             default:
                 break;
                 
-        }
-        this.setState({ errors, [name]: value });
+        } */
+        this.setState({value: event.target.value});
     }
     return (
         <>
@@ -71,7 +81,7 @@ const Contact = () => {
                                     <label>Name</label>
                                 </div>
                                 <div className="col-100">
-                                    <input type="text" id="name" name="user_name" placeholder="Your name.." required onChange={handleChange} />
+                                    <input type="text" id="name" name="user_name" placeholder="Your name.." value={this.state.value} required onChange={this.handleChange} />
                                 </div>
 
                             </div>
@@ -80,7 +90,7 @@ const Contact = () => {
                                     <label>Email</label>
                                 </div>
                                 <div className="col-100">
-                                    <input type="email" id="email" name="user_email" placeholder="E-mail" required onChange={handleChange} />
+                                    <input type="email" id="email" name="user_email" placeholder="E-mail" value={this.state.value} required onChange={handleChange} />
                                 </div>
                             </div>
                             <div className="row">
@@ -88,7 +98,7 @@ const Contact = () => {
                                     <label>Message</label>
                                 </div>
                                 <div className="col-100">
-                                    <textarea id="message" name="message" placeholder="Write something.." required onChange={handleChange}></textarea>
+                                    <textarea id="message" name="message" placeholder="Write something.." value={this.state.value} required onChange={handleChange}></textarea>
                                 </div>
                             </div>
                             <div className="row">
