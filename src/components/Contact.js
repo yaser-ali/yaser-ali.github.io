@@ -11,14 +11,6 @@ const Contact = () => {
     // const [StatusMessage, setStatusMessage] = useState('');
 
 
-    constructor(props) {
-        super(props);
-        this.state = {value: ''};
-        this.handleChange this.handleChange.bind(this);
-        this.handleSubmit this.handleSubmit.bind(this);
-
-    }
-
 
     const handleSubmit = (e) => {
         e.preventDefault();
