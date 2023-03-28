@@ -11,13 +11,13 @@ const Contact = () => {
     // const [StatusMessage, setStatusMessage] = useState('');
 
 
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {value: ''};
+    constructor(props) {
+        super(props);
+        this.state = {value: ''};
+        this.handleChange this.handleChange.bind(this);
+        this.handleSubmit this.handleSubmit.bind(this);
 
-    //     this.handleChange this.handleChange.bind(this);
-    //     this.handleSubmit this.handleSubmit.bind(this);
-    // }
+    }
 
 
     const handleSubmit = (e) => {
@@ -43,11 +43,11 @@ const Contact = () => {
 
     const handleChange = (event) => {
         event.preventDefault();
-        // const { name, value } = event.target;
-        // let errors = this.state.errors;
+        const { name, value } = event.target;
+        let errors = this.state.errors;
 
         
-        /* switch (name) {
+        switch (name) {
             case 'user_Name':
                 errors.user_name = ""
                         ? 'Name must be at least 3 characters long'
@@ -66,8 +66,8 @@ const Contact = () => {
             default:
                 break;
                 
-        } */
-        this.setState({value: event.target.value});
+        }
+        this.setState({ errors, [name]: value });
     }
     return (
         <>
