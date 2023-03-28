@@ -10,8 +10,6 @@ const Contact = () => {
 
     // const [StatusMessage, setStatusMessage] = useState('');
 
-
-
     const handleSubmit = (e) => {
         e.preventDefault();
         emailjs.sendForm('service_qlaojj9', 'template_hr9cn9l', form.current, 'o39-FujFPQYn48njg')
@@ -73,7 +71,7 @@ const Contact = () => {
                                     <label>Name</label>
                                 </div>
                                 <div className="col-100">
-                                    <input type="text" id="name" name="user_name" placeholder="Your name.." value={this.state.value} required onChange={this.handleChange} />
+                                    <input type="text" id="name" name="user_name" placeholder="Your name.." required onChange={handleChange} />
                                 </div>
 
                             </div>
@@ -82,7 +80,7 @@ const Contact = () => {
                                     <label>Email</label>
                                 </div>
                                 <div className="col-100">
-                                    <input type="email" id="email" name="user_email" placeholder="E-mail" value={this.state.value} required onChange={handleChange} />
+                                    <input type="email" id="email" name="user_email" placeholder="E-mail" required onChange={handleChange} />
                                 </div>
                             </div>
                             <div className="row">
@@ -90,7 +88,7 @@ const Contact = () => {
                                     <label>Message</label>
                                 </div>
                                 <div className="col-100">
-                                    <textarea id="message" name="message" placeholder="Write something.." value={this.state.value} required onChange={handleChange}></textarea>
+                                    <textarea id="message" name="message" placeholder="Write something.." required onChange={handleChange}></textarea>
                                 </div>
                             </div>
                             <div className="row">
