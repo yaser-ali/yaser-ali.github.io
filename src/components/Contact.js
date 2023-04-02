@@ -32,46 +32,22 @@ const Contact = () => {
 
 
     const handleChange = (event) => {
-        event.preventDefault();
-        const { name, value } = event.target;
-        let errors = this.state.errors;
-
-        
-        switch (name) {
-            case 'user_Name':
-                errors.user_name = ""
-                        ? 'Name must be at least 3 characters long'
-                        : '';
-                break;
-            case 'email':
-                errors.email = ""
-                    ? ''
-                    : 'Email is not valid!';
-                break;
-            case 'message':
-                errors.message = ""
-                        ? 'Password must be at least 8 characters long!'
-                        : '';
-                break;
-            default:
-                break;
-                
-        }
-        this.setState({ errors, [name]: value });
+        this.setState({value: event.target.value});
     }
+
     return (
         <>
             <section id="Contact">
                 <div className="container reveal">
                     <h2>Contact Me!</h2>
                     <div className="cont">
-                        <form ref={form} onSubmit={handleSubmit}>
+                        <form ref={form.current} onSubmit={handleSubmit}>
                             <div className="row">
                                 <div className="col-100">
                                     <label>Name</label>
                                 </div>
                                 <div className="col-100">
-                                    <input type="text" id="name" name="user_name" placeholder="Your name.." required onChange={handleChange} />
+                                    <input type="text" id="name" name="user_name" placeholder="Your name.." required onChange={(event) => handleChange(event.target.value)} />
                                 </div>
 
                             </div>
@@ -80,7 +56,7 @@ const Contact = () => {
                                     <label>Email</label>
                                 </div>
                                 <div className="col-100">
-                                    <input type="email" id="email" name="user_email" placeholder="E-mail" required onChange={handleChange} />
+                                    <input type="email" id="email" name="user_email" placeholder="E-mail" required onChange={(event) => handleChange(event.target.value)} />
                                 </div>
                             </div>
                             <div className="row">
@@ -88,7 +64,7 @@ const Contact = () => {
                                     <label>Message</label>
                                 </div>
                                 <div className="col-100">
-                                    <textarea id="message" name="message" placeholder="Write something.." required onChange={handleChange}></textarea>
+                                    <textarea id="message" name="message" placeholder="Write something.." required onChange={(event) => handleChange(event.target.value)}></textarea>
                                 </div>
                             </div>
                             <div className="row">
