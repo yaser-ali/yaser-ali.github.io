@@ -1,9 +1,12 @@
 import { useState } from "react";
 // import pdf from "../Yaser.pdf";
 import Contact from "./Contact";
-import {DownArrow} from "@styled-icons/boxicons-solid/DownArrow";
+import { DownArrow } from "@styled-icons/boxicons-solid/DownArrow";
 import styled from 'styled-components';
 import ScrollToTop from "react-scroll-to-top";
+import calc from "../img/calc.png";
+import cart from "../img/cart.png"
+import screen from "../img/screenshare.png"
 
 const ArrowD = styled(DownArrow)`
   width: 15%;
@@ -15,23 +18,23 @@ const ArrowD = styled(DownArrow)`
 
 const Content = () => {
     const [Bgcolor, setBgcolor] = useState(false);
-    
+
     const HandleClick = () => {
         setBgcolor(!Bgcolor);
     }
 
     return (
         <>
-      <a href="#home"><ScrollToTop smooth /></a>
+            <a href="#home"><ScrollToTop smooth /></a>
             <div className={Bgcolor === true ? 'white' : 'black'}>
                 <section id="Home">
                     <div className='Center-Home'>
-                    <button className="changecolor" onClick={HandleClick}>{Bgcolor ? 'Off' : 'On'}</button>
+                        <button className="changecolor" onClick={HandleClick}>{Bgcolor ? 'Off' : 'On'}</button>
                         <h1 className="headingHome">Hi! I am Yaser Ali</h1>
                         {/* <a className='btnCV' target="_blank" rel='noreferrer' href={pdf}>Download My Resume</a> */}
-                       {/* <br />
+                        {/* <br />
                          */}
-                         <a className="bounceDownArrow" href="#About"> <ArrowD /></a>
+                        <a className="bounceDownArrow" href="#About"> <ArrowD /></a>
                     </div>
                 </section>
 
@@ -138,6 +141,49 @@ const Content = () => {
                     </div>
                 </section>
 
+                <section id="Projects">
+                    <div className="container reveal">
+                        <h2>Projects</h2>
+                        <div className="text-container">
+                            <div className="text-box">
+                                <h3>Simple JS Calculator</h3>
+                                <p>
+                                    <img src={calc} alt="calculator" width="100%"></img>
+                                </p>
+                                <div className="project-box">
+                                    <a href="https://simple-js-calculator-ten.vercel.app/" className="btnCV">Site</a>
+                                </div>
+                                <div className="project-box">
+                                <a href="https://github.com/yaser-ali/SimpleJSCalculator" className="btnCV">Code</a>
+                                </div>
+                            </div>
+                            <div className="text-box">
+                                <h3>Cart</h3>
+                                <p>
+                                    <img src={cart} alt="cart" width="100%"></img>
+                                </p>
+                                <div className="project-box">
+                                    <a href="https://kata-ashen.vercel.app/" className="btnCV">Site</a>
+                                </div>
+                                <div className="project-box">
+                                <a href="https://github.com/yaser-ali/Kata" className="btnCV">Code</a>
+                                </div>
+                            </div>
+                            <div className="text-box">
+                                <h3>Screenshare</h3>
+                                <p>
+                                    <img src={screen} alt="screenshare" width="100%"></img>
+                                </p>
+                                <div className="project-box">
+                                    <a href="https://screenshareexample.vercel.app/" className="btnCV">Site</a>
+                                </div>
+                                <div className="project-box">
+                                <a href="https://github.com/yaser-ali/screenshareexample" className="btnCV">Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
                 <section id="Experience">
                     <div className="container reveal">
