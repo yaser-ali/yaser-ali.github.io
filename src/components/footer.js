@@ -46,7 +46,7 @@ const Footer = () => {
             <h3>Follow Me</h3>
             <a href="https://github.com/yaser-ali"><Git className="footerSM" /></a>
             <a href="https://www.linkedin.com/in/yaser-al-thahab-17654a241/"><Link className="footerSM" /></a>
-            <a href="https://www.instagram.com/ya.al__/"><Insta className="footerSM" /></a>
+            <a href="https://www.instagram.com/yaser.dgaf/"><Insta className="footerSM" /></a>
             
           </div>
 
